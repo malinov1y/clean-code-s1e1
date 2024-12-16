@@ -27,8 +27,8 @@ body {
   width: 500px;
   margin: 0 auto 0;
 }
-.todo__label-task,
-.todo__input-task {
+.todo__label--task,
+.todo__input--task {
   width: 56%;
   display: inline-block;
   flex-grow: 1
@@ -36,17 +36,17 @@ body {
 .todo__row-wrapper {
   display: flex;
 }
-ul {
+.todo__list {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+.todo__task, .todo__section-title {
   list-style:none;
 }
-input,button{
+.todo__input,.todo__button{
   outline:none;
 }
-button {
+.todo__button {
   background: none;
   border: 0px;
   color: #888;
@@ -55,12 +55,12 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.todo__button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+.todo__section-title,
+.todo__label--new-task {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -69,7 +69,7 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.todo__input--task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -81,21 +81,21 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.todo__input--task:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.todo__label--new-task {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.todo__task {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -103,20 +103,20 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.todo__task{
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.todo__input--checkbox {
   margin: 0 10px;
 }
-li > label {
+.todo__label--task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+.todo__input--task {
   width: 226px
 }
 .todo__icon--delete {
@@ -129,21 +129,21 @@ li >    input[type="text"] {
 }
 
 /* Completed */
-ul.todo__list--complete label {
+.todo__list--complete .todo__label--task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.todo__task .todo__input--task {
   display:none
 }
 
-ul li.todo__task--editing input[type="text"] {
+.todo__task--editing .todo__input--task {
   display:inline-block;
   width:224px
 }
 
-ul li.todo__task--editing label {
+.todo__task--editing .todo__label--task {
   display:none;
 }
