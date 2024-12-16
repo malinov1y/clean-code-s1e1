@@ -40,10 +40,12 @@ body {
   margin: 0;
   padding: 0px;
 }
-.todo__task, .todo__section-title {
+.todo__task,
+.todo__section-title {
   list-style: none;
 }
-.todo__input,.todo__button{
+.todo__input,
+.todo__button{
   outline: none;
 }
 .todo__button {
